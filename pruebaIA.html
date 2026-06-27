@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botas Don Chuy | El Rey de los Productos Vaqueros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="./imagenes/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="./imagenes/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./imagenes/favicon-16.png">
+  <link rel="apple-touch-icon" href="./imagenes/apple-touch-icon.png">
+  <style>
+    :root {
+      --brown: #4b2412;
+      --gold: #b77a32;
+      --light: #f8f5f1;
+      --text: #2b1a12;
+      --gray: #666;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(46px, 5vw, 78px);
+      line-height: 0.95;
+      color: var(--brown);
+      margin-bottom: 24px;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 800;
+      font-size: clamp(44px, 4.5vw, 70px);
+    }
+
+    .hero p {
+      font-family: "Inter", Arial, sans-serif;
+      font-size: clamp(18px, 1.5vw, 24px);
+      line-height: 1.45;
+      max-width: 720px;
+      color: #1f2937;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn {
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px 28px;
+      border-radius: 7px;
+    }
+
+    .btn::after {
+      content: "›";
+      font-size: 24px;
+      margin-left: 10px;
+      line-height: 0;
+    }
+
+    .btn-outline::after {
+      content: "";
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    header {
+      background: white;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logos {
+      display: flex;
+      align-items: center;
+    }
+
+    .logos-link {
+      display: flex;
+      align-items: center;
+    }
+
+    .logos-header-img {
+      width: auto;
+      height: 270px;
+      object-fit: contain;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .logos-header-img {
+        height: 250px;
+      }
+    }    
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 11px;
+      color: var(--gold);
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn {
+      background: var(--brown);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      border: 1px solid var(--brown);
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--brown);
+    }
+
+    .menu {
+      display: none;
+      font-size: 28px;
+    }
+
+    .hero {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      padding: 6%;
+      position: relative;
+      overflow: hidden;
+      background: #f5eee7;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.97) 10%, rgba(255,255,255,.70) 47%, rgba(255,255,255,.10) 100%),
+        url("./imagenes/01-hero-botas-sombrero-cinturon.png");
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .hero-content {
+      max-width: 530px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      color: var(--brown);
+      margin-bottom: 16px;
+      line-height: 1.05;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+      font-style: italic;
+      display: block;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .features {
+      width: 88%;
+      margin: -45px auto 60px;
+      background: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,.10);
+      border-radius: 16px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      padding: 24px 28px;
+      position: relative;
+      z-index: 2;
+    }
+
+  .feature {
+    text-align: center;
+    color: var(--brown);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .feature i {
+    font-size: 34px;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .feature span {
+    display: block;
+  }
+
+    section {
+      padding: 50px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+      color: var(--brown);
+      letter-spacing: 1px;
+    }
+
+    .stores {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .store-card {
+      background: var(--light);
+      border-radius: 18px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 280px;
+    }
+
+    .store-info {
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .store-card h3 {
+      color: var(--brown);
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .store-card p {
+      color: var(--gray);
+      line-height: 1.5;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .store-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category {
+      background: var(--light);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      font-weight: bold;
+      color: var(--brown);
+      transition: transform .2s ease;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+    }
+
+    .category img {
+      width: 100%;
+      height: 145px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .product {
+      border: 1px solid #eee;
+      border-radius: 16px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .product-img {
+      height: 220px;
+      background: var(--light);
+      overflow: hidden;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+      color: var(--brown);
+    }
+
+    .product-info p {
+      color: var(--gray);
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .location{
+      width:90%;
+      margin:90px auto;
+      background:#F8F4EF;
+      border-radius:26px;
+      padding:60px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+    }
+
+    .location-subtitle{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      color:#B87B2B;
+      font-size:1.5em;
+      font-weight:700;
+      letter-spacing:2px;
+      margin-bottom:15px;
+    }
+
+    .location h2{
+      font-size:1.5em;
+      color:#4B220C;
+      margin-bottom:25px;
+    }
+
+    .location p{
+      font-size:16px;
+      color:#555;
+      line-height:1.6;
+      margin-bottom:45px;
+    }
+
+    .location-list{
+      display:flex;
+      flex-direction:column;
+      gap:30px;
+    }
+
+    .location-item{
+      display:flex;
+      gap:22px;
+      align-items:flex-start;
+    }
+
+    .location-item .icon{
+      width:62px;
+      height:62px;
+      border-radius:50%;
+      background:#EFE3D5;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .location-item i{
+      color:#8B4513;
+      font-size:14px;
+    }
+
+    .location-item h4{
+      margin:0 0 8px;
+      color:#2F1A0E;
+      font-size:25px;
+    }
+
+    .location-item span{
+      color:#555;
+      font-size:16px;
+      line-height:1.6;
+    }
+
+    .location-buttons{
+      display:flex;
+      gap:18px;
+      margin-top:50px;
+    }
+
+    .location-map iframe{
+      width:100%;
+      height:100%;
+      min-height:560px;
+      border:none;
+      border-radius:22px;
+    }
+
+    @media(max-width:992px){
+
+  .location{
+    grid-template-columns:1fr;
+    padding:35px 25px;
+    gap:35px;
+  }
+
+  .location h2{
+    font-size:1.5em;
+  }
+
+  .location p{
+    font-size:16px;
+  }
+
+  .location-item h4{
+    font-size:22px;
+  }
+
+  .location-item span{
+    font-size:16px;
+  }
+
+  .location-buttons{
+    flex-direction:column;
+  }
+
+  .location-map iframe{
+    min-height:340px;
+  }
+}
+
+    footer {
+      background: var(--brown);
+      color: white;
+      padding: 50px 6%;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    footer h3 {
+      margin-bottom: 16px;
+      color: var(--gold);
+    }
+
+    footer a,
+    footer p {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .mobile-bar {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        height: 76px;
+        padding: 0 20px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .logos {
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 14px;
+      }
+
+      .logo span {
+        font-size: 8px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero h1 span {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn {
+        font-size: 15px;
+        padding: 13px 20px;
+      }
+
+      .features {
+        width: 92%;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: -30px;
+        padding: 20px 14px;
+        gap: 20px 10px;
+      }
+
+      .feature {
+        font-size: 11px;
+      }
+
+      .feature i {
+        font-size: 26px;
+      }
+
+      .stores {
+        grid-template-columns: 1fr;
+      }
+
+      .store-card {
+        grid-template-columns: 1fr;
+      }
+
+      .store-image {
+        height: 250px;
+      }
+
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category img {
+        height: 125px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .guide {
+        grid-template-columns: 1fr;
+        padding: 30px;
+      }
+
+      .guide h2 {
+        font-size: 30px;
+      }
+
+      footer {
+        grid-template-columns: 1fr;
+        padding-bottom: 90px;
+      }
+
+      .mobile-bar {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: 1px solid #ddd;
+        z-index: 20;
+      }
+
+      .mobile-bar a {
+        padding: 10px 4px;
+        text-align: center;
+        font-size: 11px;
+        color: var(--brown);
+        text-decoration: none;
+      }
+
+      .whatsapp-mobile {
+        background: var(--brown);
+        color: white !important;
+        border-radius: 50%;
+        width: 58px;
+        height: 58px;
+        margin: -24px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="menu">☰</div>
+
+    <div class="logos">
+      <a href="#inicio" class="logos-link">
+        <img
+          src="./imagenes/logos-header.png"
+          alt="Botas Don Chuy y El Rey de los Productos Vaqueros"
+          class="logos-header-img"
+        />
+      </a>
+    </div>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#destacados">Destacados</a>
+      <a href="#sucursales">Sucursales</a>
+      <a href="https://wa.me/522212536873"" class="btn"><i class="fa-brands fa-whatsapp"></i> Enviar WhatsApp</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <h1>
+          El estilo vaquero
+          <span>empieza aquí</span>
+        </h1>
+
+        <p>
+          Botas, sombreros, cinturones y ropa vaquera para trabajo,
+          hebillas y todos los días.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#destacados" class="btn">Ver productos</a>
+          <a href="https://wa.me/522212536873" class="btn btn-outline">
+            <i class="fa-brands fa-whatsapp"></i>
+            Cotizar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="features">
+      <div class="feature">
+        <i class="fa-solid fa-award"></i>
+        <span>Productos de<br>calidad</span>
+      </div>
+    
+      <div class="feature">
+        <i class="fa-regular fa-user"></i>
+        <span>Atención<br>personalizada</span>
+      </div>
+    
+      <div class="feature">
+        <i class="fa-solid fa-people-group"></i>
+        <span>Variedad para toda<br>la familia</span>
+      </div>
+    
+      <div class="feature">
+        <i class="fa-solid fa-truck-fast"></i>
+        <span>Envíos y entregas<br>locales</span>
+      </div>
+    
+      <div class="feature">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Compra segura por<br>WhatsApp</span>
+      </div>
+    
+      <div class="feature">
+        <i class="fa-regular fa-user"></i>
+        <span>Experiencia en<br>productos vaqueros</span>
+      </div>
+    </div>
+
+    <section>
+      <h2 class="section-title">DOS TIENDAS, UN MISMO COMPROMISO</h2>
+
+      <div class="stores">
+        <article class="store-card">
+          <div class="store-info">
+            <h3>Botas Don Chuy</h3>
+            <p>
+              Botas vaqueras para trabajo, hebillas, vestir y uso diario.
+              Calidad, comodidad y estilo en cada paso.
+            </p>
+            <a href="#categorias" class="btn btn-outline">Ver botas</a>
+          </div>
+
+          <img
+            class="store-image"
+            src="./imagenes/02-botas-don-chuy-card.png"
+            alt="Botas Don Chuy"
+          />
+        </article>
+
+        <article class="store-card">
+          <div class="store-info">
+            <h3>El Rey</h3>
+            <p>
+              Sombreros, camisas, pantalones, cinturones y accesorios
+              para completar tu look vaquero.
+            </p>
+            <a href="#categorias" class="btn btn-outline">Ver productos</a>
+          </div>
+
+          <img
+            class="store-image"
+            src="./imagenes/03-el-rey-productos-vaqueros-card.png"
+            alt="El Rey de los Productos Vaqueros"
+          />
+        </article>
+      </div>
+    </section>
+
+    <section id="categorias">
+      <h2 class="section-title">CATEGORÍAS PRINCIPALES</h2>
+
+      <div class="categories">
+        <article class="category">
+          <img src="./imagenes/04-categoria-botas.png" alt="Botas vaqueras" />
+          <p>Botas</p>
+        </article>
+
+        <article class="category">
+          <img src="./imagenes/05-categoria-sombreros.png" alt="Sombreros vaqueros" />
+          <p>Sombreros</p>
+        </article>
+
+        <article class="category">
+          <img src="./imagenes/06-categoria-cinturones.png" alt="Cinturones vaqueros" />
+          <p>Cinturones</p>
+        </article>
+
+        <article class="category">
+          <img src="./imagenes/07-categoria-camisas.png" alt="Camisas vaqueras" />
+          <p>Camisas</p>
+        </article>
+
+        <article class="category">
+          <img src="./imagenes/08-categoria-pantalones.png" alt="Pantalones de mezclilla" />
+          <p>Pantalones</p>
+        </article>
+
+        <article class="category">
+          <img src="./imagenes/09-categoria-accesorios.png" alt="Accesorios vaqueros" />
+          <p>Accesorios</p>
+        </article>
+
+        <article class="category">
+          <img src="./imagenes/10-categoria-ropa-trabajo.png" alt="Ropa de trabajo" />
+          <p>Ropa de trabajo</p>
+        </article>
+
+        <article class="category">
+          <img src="./imagenes/11-categoria-hebillas.png" alt="Productos para hebillas" />
+          <p>Hebillas</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="destacados">
+      <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
+
+      <div class="products">
+        <article class="product">
+          <div class="product-img">
+            <img src="./imagenes/04-categoria-botas.png" alt="Bota vaquera clásica" />
+          </div>
+          <div class="product-info">
+            <h3>Bota vaquera clásica</h3>
+            <p>Ideal para trabajo, vestir o hebillas.</p>
+            <a href="https://wa.me/522212536873" class="btn">Pedir por WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-img">
+            <img src="./imagenes/05-categoria-sombreros.png" alt="Sombrero vaquero" />
+          </div>
+          <div class="product-info">
+            <h3>Sombrero vaquero</h3>
+            <p>Estilo tradicional para toda ocasión.</p>
+            <a href="https://wa.me/522212536873" class="btn">Pedir por WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-img">
+            <img src="./imagenes/07-categoria-camisas.png" alt="Camisa vaquera" />
+          </div>
+          <div class="product-info">
+            <h3>Camisa vaquera</h3>
+            <p>Comodidad y presencia para tu día.</p>
+            <a href="https://wa.me/522212536873" class="btn">Pedir por WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-img">
+            <img src="./imagenes/08-categoria-pantalones.png" alt="Pantalón de mezclilla" />
+          </div>
+          <div class="product-info">
+            <h3>Pantalón de mezclilla</h3>
+            <p>Resistente para trabajo y uso diario.</p>
+            <a href="https://wa.me/522212536873" class="btn">Pedir por WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="location" id="sucursales">
+
+      <div class="location-content">
+  
+          <span class="location-subtitle">
+              <i class="fa-solid fa-location-dot"></i>
+              VISÍTANOS
+          </span>
+  
+          <h2>Encuentra nuestra tienda</h2>
+  
+          <p>
+              Ven a conocer nuestra gran variedad de botas, sombreros,
+              cinturones, ropa vaquera y accesorios.
+          </p>
+  
+          <div class="location-list">
+  
+            <div class="location-item">
+
+              <div class="icon">
+                  <i class="fa-solid fa-location-dot"></i>
+              </div>
+          
+              <div>
+                  <h4>Dirección</h4>
+          
+                  <span>
+                      Av. Reforma 904<br>
+                      Centro Histórico<br>
+                      Heroica Puebla de Zaragoza, Puebla
+                  </span>
+          
+              </div>
+          
+          </div>
+  
+              <div class="location-item">
+  
+                  <div class="icon">
+                      <i class="fa-solid fa-phone"></i>
+                  </div>
+  
+                  <div>
+  
+                      <h4>Teléfono</h4>
+  
+                      <span>221 253 6873</span>
+  
+                  </div>
+  
+              </div>
+  
+              <div class="location-item">
+  
+                  <div class="icon">
+                      <i class="fa-solid fa-clock"></i>
+                  </div>
+  
+                  <div>
+  
+                      <h4>Horario</h4>
+  
+                      <span>
+                          Lunes a Domingo<br>
+                          9:00 AM - 8:00 PM
+                      </span>
+  
+                  </div>
+  
+              </div>
+  
+          </div>
+  
+          <div class="location-buttons">
+  
+              <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  class="btn">
+  
+                  <i class="fa-solid fa-paper-plane"></i>
+                  Cómo llegar
+  
+              </a>
+  
+              <a
+                  href="https://wa.me/522212536873"
+                  target="_blank"
+                  class="btn btn-outline">
+  
+                  <i class="fa-brands fa-whatsapp"></i>
+                  WhatsApp
+  
+              </a>
+  
+          </div>
+  
+      </div>
+  
+      <div class="location-map">
+  
+        <iframe
+          src="https://maps.google.com/maps?q=Av.%20Reforma%20904,%20Centro,%20Heroica%20Puebla%20de%20Zaragoza,%20Puebla&t=&z=17&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;border-radius:22px;"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+  
+      </div>
+  
+  </section>
+  </main>
+
+  <footer id="contacto">
+    <div>
+      <h3>Botas Don Chuy | El Rey</h3>
+      <p>
+        Todo para el estilo vaquero: botas, sombreros, cinturones,
+        ropa y accesorios.
+      </p>
+    </div>
+
+    <div>
+      <h3>Productos</h3>
+      <a href="#categorias">Botas</a>
+      <a href="#categorias">Sombreros</a>
+      <a href="#categorias">Camisas</a>
+      <a href="#categorias">Cinturones</a>
+    </div>
+
+    <div>
+      <h3>Contacto</h3>
+      <a href="https://wa.me/522212536873">WhatsApp</a>
+      <a href="https://www.facebook.com/share/1bebQp2bo1/">Facebook</a>
+      <a href="https://www.instagram.com/botasdonchuy_pue?igsh=ZTJrOWxjeWFrZHRo&utm_source=qr">Instagram</a>
+      <a href="https://www.tiktok.com/@botas.don.chuy0?_r=1&_t=ZS-97ZHbkRYnNH">Tik tok</a>
+    </div>
+
+    <div id="sucursales">
+      <h3>Sucursales</h3>
+      <p>Consulta dirección y horarios.</p>
+      <a href="#">Cómo llegar</a>
+    </div>
+  </footer>
+
+  <div class="mobile-bar">
+    <a href="#inicio">Inicio</a>
+    <a href="#categorias">Categorías</a>
+    <a href="https://wa.me/522212536873"" class="whatsapp-mobile">💬</a>
+    <a href="#sucursales">Sucursal</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+</body>
+</html>
