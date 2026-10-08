@@ -1,0 +1,36 @@
+:root {
+      --brown: #4b2412;
+      --gold: #b77a32;
+      --light: #f8f5f1;
+      --text: #2b1a12;
+      --gray: #666;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    section {
+      padding: 50px 6%;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+      color: var(--brown);
+      letter-spacing: 1px;
+    }

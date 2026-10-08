@@ -1,0 +1,81 @@
+.hero {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      padding: 6%;
+      position: relative;
+      overflow: hidden;
+      background: #f5eee7;
+    }
+
+    /* Contenedor exclusivo para las imágenes del carrusel de fondo */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+      opacity: 1;
+      transition: opacity 1s ease-in-out; /* Transición suave de 1 segundo */
+    }
+
+    /* El degradado se queda aquí como una capa fija encima de las fotos */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,.97) 10%, rgba(255,255,255,.70) 47%, rgba(255,255,255,.10) 100%);
+      z-index: 1;
+      pointer-events: none; /* Permite hacer clic a través de la capa si fuera necesario */
+    }
+
+    .hero-content {
+      max-width: 530px;
+      position: relative;
+      z-index: 2; /* Asegura que el texto esté siempre por encima del fondo y el degradado */
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      color: var(--brown);
+      margin-bottom: 16px;
+      line-height: 1.05;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+      font-style: italic;
+      display: block;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    
+ @media (max-width: 900px) {
+     .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero h1 span {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+ }
