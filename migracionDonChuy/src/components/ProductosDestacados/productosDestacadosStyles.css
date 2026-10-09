@@ -37,3 +37,8 @@
     margin-bottom: 16px;
     font-size: 14px;
 }
+  @media (max-width: 900px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+}
